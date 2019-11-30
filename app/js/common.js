@@ -79,7 +79,10 @@ $(document).ready(function(){
         if ($(window).width()>=480) {
             $('.adv-item-title').matchHeight({byRow: true});
             $('.adv-item-desc').matchHeight({byRow: true});
+            $('.services-controls a').matchHeight();
         }
+
+
     }
 
     $(window).resize(function() {
@@ -88,6 +91,7 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.services-wrap').tabs();
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change

@@ -6,6 +6,8 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .services-tabs
+    width: calc(100% - 315px)
 
   .s-advantages
     padding-bottom: 0
@@ -23,6 +25,26 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .serv-item
+    padding-top: 0
+
+  .services-tabs
+    width: 100%
+
+  .services-wrap
+    flex-direction: column
+
+  .services-controls
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    li
+      width: calc(50% - 15px)
+    a
+      font-size: 16px
+
   .s-intro
     h1
       font-size: 48px
@@ -32,6 +54,26 @@
         font-size: 24px
 // ≥768px
 +media-breakpoint-down(sm)
+
+
+  .serv-item
+    font-size: 16px
+    h3
+      margin-bottom: 12px
+
+  .services-controls
+    a
+      font-size: 13px
+      padding: 20px 10px
+      .svg
+        width: 35px
+      span
+        width: calc(100% - 50px)
+
+  .services-img
+    top: 160px
+    right: -250px
+
   .s-intro
     margin-top: 67px
 
@@ -56,6 +98,28 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .serv-item
+    padding-left: 15px
+    padding-right: 15px
+
+  .services-wrap
+    margin-left: 0
+    margin-top: 70px
+
+  .services-controls
+    left: 10px
+    width: calc(100% - 20px)
+    li
+      width: 100%
+    a
+      margin-bottom: 10px
+
+  .s-services
+    padding: 60px 0
+
+  .section-title
+    font-size: 38px
 
   .sexangle
     width: 60px
