@@ -6,6 +6,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .how-item
+    &:before
+      display: none
+
+  .how-wrap
+    margin-top: 70px
+
   .services-tabs
     width: calc(100% - 315px)
 
@@ -98,6 +105,17 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-how
+    padding: 60px 0 30px
+
+  .how-wrap
+    margin-top: 40px
+
+  .how-item
+    .adv-item-img
+      .svg
+        top: -15px
 
   .serv-item
     padding-left: 15px

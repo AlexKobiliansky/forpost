@@ -1,0 +1,48 @@
+.s-how
+  padding: 80px 0 70px
+  box-shadow: 0 0 60px rgba(#92a1d2, .8)
+  position: relative
+  z-index: 2
+  counter-reset: how-item
+  overflow: hidden
+  &:after
+    content: ''
+    position: absolute
+    width: 580px
+    height: 580px
+    background-color: $acc-violet
+    border-radius: 50%
+    top: 200px
+    right: -450px
+    z-index: -1
+
+.how-img
+  position: absolute
+  left: -50px
+  bottom: -90px
+
+.how-wrap
+  margin-top: 155px
+
+.how-item
+  box-shadow: 0 15px 15px 10px rgba(#92a1d2, .25)
+  border: 1px solid #ebeef8
+  position: relative
+  .btn
+    width: 100%
+    margin-top: 40px
+  .adv-item-img
+    margin-bottom: 15px
+    .svg
+      top: -25px
+  &:before
+    counter-increment: how-item
+    content: counter(how-item)
+    position: absolute
+    font-size: 216px
+    font-weight: 700
+    top: -185px
+    z-index: -1
+    right: 0
+    color: $acc-brown
+    opacity: .07
