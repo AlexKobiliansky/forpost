@@ -14,9 +14,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
-
+  .s-intro
+    h1
+      font-size: 48px
+    h2
+      font-size: 36px
+      span
+        font-size: 24px
 // ≥768px
 +media-breakpoint-down(sm)
+  .s-intro
+    margin-top: 67px
+
+  .intro-content
+    width: 100%
+
   .logo
     .svg
       width: 160px
@@ -36,6 +48,23 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-intro
+    margin-top: 100px
+    padding-bottom: 200px
+    h1
+      font-size: 36px
+      margin-bottom: 10px
+    h2
+      font-size: 24px
+      span
+        font-size: 18px
+        padding-left: 0
+        margin-top: 10px
+    .btn
+      font-size: 14px
+      padding: 12px 20px
+      margin-top: 30px
+
   .header-line
     flex-wrap: wrap
   .logo
@@ -50,13 +79,17 @@
     margin-left: auto
     margin-right: auto
     margin-top: 20px
-    padding-left: 40px
+    padding-left: 25px
     a
-      font-size: 17px
+      font-size: 15px
+      display: inline-block
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
     &:before
-      width: 30px
-      height: 30px
-      top: calc(50% - 15px)
+      width: 20px
+      height: 20px
+      top: calc(50% - 10px)
 
 
 /*==========  Mobile First  ==========*/
