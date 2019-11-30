@@ -73,6 +73,22 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+
+    function heightses() {
+
+        if ($(window).width()>=480) {
+            $('.adv-item-title').matchHeight({byRow: true});
+            $('.adv-item-desc').matchHeight({byRow: true});
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
