@@ -10,6 +10,16 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  form
+    h3
+      font-size: 26px
+
+  .body-form
+    label, .btn-wrap
+      width: calc(33.333% - 20px)
+    .jq-selectbox__select, input
+      font-size: 18px
+
   .about-img
     display: none
 
@@ -59,6 +69,23 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+
+  form
+    .label-checkbox
+      display: flex
+      align-items: center
+
+  .body-form
+    .form-labels-wrap
+      display: block
+    label, .btn-wrap
+      width: 100%
+    label
+      margin-bottom: 15px
+    .btn-wrap
+      margin-top: 15px
+
+
   .about-photo
     height: 450px
 
@@ -90,6 +117,10 @@
         font-size: 24px
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .body-form
+    margin-left: 0
+    margin-right: 0
 
   .s-about
     padding: 60px 0
@@ -145,6 +176,12 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  form, .body-form
+    h3
+      font-size: 20px
+    .jq-selectbox__select, input
+      font-size: 16px
 
   .s-about
     font-size: 16px

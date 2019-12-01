@@ -1,0 +1,122 @@
+.s-form
+  background-image: url('../img/bg-form.jpg')
+  +bg-cover
+
+
+form
+  h3
+    font-size: 30px
+    font-weight: 700
+    text-align: center
+    color: $acc-brown
+    margin-bottom: 30px
+  .btn
+    width: 100%
+  label.label-checkbox
+    width: 100%
+    margin-top: 15px
+    font-size: 14px
+    cursor: pointer
+  input
+    font-size: 20px
+    padding: 14px 10px 8px 0
+    border: none
+    border-bottom: 2px solid $acc-brown
+    background-color: transparent
+    width: 100%
+    &::placeholder
+      color: $text
+    &.error
+      color: red
+      border-color: red!important
+      &::placeholder
+        color: red!important
+  .help-block
+    display: none
+
+
+.body-form
+  margin-left: 80px
+  margin-right: 80px
+  padding: 55px 15px
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+  label, .btn-wrap
+    width: calc(33.333% - 60px)
+
+.popup-form
+
+
+
+
+.jq-selectbox
+  width: 100%
+  &:hover, &:focus, &.focused
+    .jq-selectbox__trigger-arrow
+      border-top-color: $acc-brown
+    .jq-selectbox__select
+      border: none
+      border-bottom: 2px solid $acc-brown
+  &.opened
+    .jq-selectbox__trigger-arrow
+      transform: rotate(180deg)
+  &.has-error
+    .jq-selectbox__select
+      border-color: red
+      color: red
+  &.changed
+    .jq-selectbox__select
+      color: $text
+      border-color: $acc-brown
+
+
+
+
+.jq-selectbox__select
+  font-size: 20px
+  border: none
+  border-bottom: 2px solid $acc-brown
+  background: transparent
+  box-shadow: none
+  padding-bottom: 8px
+  padding-top: 14px
+  padding-left: 0
+  height: auto
+  line-height: 1.2
+  border-radius: 0
+  color: $text
+  &:hover
+    background: transparent
+
+.jq-selectbox__trigger
+  border: none
+
+.jq-selectbox__trigger-arrow
+  border-top: 11px solid $acc-brown
+  border-right: 9px solid transparent
+  border-left: 9px solid transparent
+  top: 22px
+
+.jq-selectbox li:hover
+  background-color: $acc-brown
+
+
+.jq-checkbox
+  width: 30px
+  height: 30px
+  background: #fff
+  border: 1px solid $acc-brown
+  border-radius: 0
+  box-shadow: none
+  float: left
+  margin-right: 9px
+  &.focused
+    border-color: $acc-brown
+
+.jq-checkbox.checked .jq-checkbox__div
+  width: 21px
+  height: 9px
+  margin: 6px 0 0 4px
+  border-bottom-color: $acc-brown
+  border-left-color: $acc-brown
