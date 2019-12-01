@@ -1,0 +1,35 @@
+.s-about
+  padding: 100px 0
+  position: relative
+  z-index: 2
+  box-shadow: 0 0 60px rgba(#92a1d2, .8)
+  overflow: hidden
+
+.about-content
+  margin-top: 60px
+  li
+    position: relative
+    padding-left: 30px
+    margin-bottom: 20px
+    &:before
+      content: ''
+      position: absolute
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: $acc-dark
+      top: 5px
+      left: 10px
+
+.about-photo
+  position: absolute
+  width: 42%
+  height: calc(100% - 208px)
+  +bg-cover
+  right: 0
+  top: 208px
+
+.about-img
+  position: absolute
+  left: 3%
+  top: 200px
