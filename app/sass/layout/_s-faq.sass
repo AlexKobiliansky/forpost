@@ -1,0 +1,70 @@
+.s-faq
+  padding: 90px 0 125px
+  position: relative
+  background-color: #ebeef8
+  overflow: hidden
+  .btn-wrap
+    text-align: center
+    margin-top: 50px
+  &:before, &:after
+    content: ''
+    position: absolute
+    border-radius: 50%
+  &:before
+    width: 580px
+    height: 580px
+    background-color: $acc-violet
+    left: -300px
+    bottom: -200px
+  &:after
+    width: 430px
+    height: 430px
+    background-color: #ebeef8
+    left: -225px
+    bottom: -125px
+  .container
+    position: relative
+    z-index: 2
+
+.faq-img
+  top: -65px
+  right: 80px
+  position: absolute
+
+.faq-wrap
+  margin-top: 50px
+  margin-left: 100px
+  margin-right: 100px
+
+.faq-item
+  margin-bottom: 15px
+  box-shadow: 0 0 15px 10px rgba(#92a1d2, .25)
+  &-quest
+    padding: 16px 55px 14px 35px
+    background-color: #fff
+    position: relative
+    line-height: 1.1
+    cursor: pointer
+    &:after
+      content: ''
+      position: absolute
+      border: 9px solid transparent
+      border-top: 11px solid $acc-brown
+      top: calc(50% - 5px)
+      right: 25px
+      +mt(.3s)
+  &-ans
+    background-color: #fff
+    padding: 15px 55px 15px 35px
+    font-size: 16px
+    line-height: 1.5
+    border: 1px solid #ebeef8
+    display: none
+    //+mt(.3s)
+  &.active
+    .faq-item-quest
+      &:after
+        transform: rotate(180deg)
+        top: calc(50% - 15px)
+    .faq-item-ans
+      //display: block

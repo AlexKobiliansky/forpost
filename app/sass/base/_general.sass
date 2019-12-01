@@ -81,6 +81,13 @@ ul
     background-color: darken($acc-brown, 5%)
     color: #fff
 
+.btn-dark
+  background-color: $acc-dark
+  color: #fff
+  &:hover, &:active, &:focus
+    background-color: lighten($acc-dark, 10%)
+    color: #fff
+
 .section-title
   text-align: center
   font-size: 48px
@@ -112,4 +119,8 @@ ul
   &:after
     bottom: -25px
     border-top: 25px solid #f8b99b
+
+.parallax
+  position: absolute
+  width: 100%
 
