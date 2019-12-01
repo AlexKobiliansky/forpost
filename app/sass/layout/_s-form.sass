@@ -17,7 +17,7 @@ form
     margin-top: 15px
     font-size: 14px
     cursor: pointer
-  input
+  input, textarea
     font-size: 20px
     padding: 14px 10px 8px 0
     border: none
@@ -33,6 +33,9 @@ form
         color: red!important
   .help-block
     display: none
+  textarea
+    height: 100px
+    resize: none
 
 
 .body-form
@@ -46,6 +49,24 @@ form
     width: calc(33.333% - 60px)
 
 .popup-form
+  background-color: #ebeef8
+  display: block
+  width: 100%
+  max-width: 600px
+  padding: 35px 50px
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  label, .btn-wrap
+    width: 100%
+  label
+    margin-bottom: 15px
+  .btn-wrap
+    margin-top: 15px
+  .label-checkbox
+    display: flex
+    align-items: center
+
 
 
 
@@ -120,3 +141,24 @@ form
   margin: 6px 0 0 4px
   border-bottom-color: $acc-brown
   border-left-color: $acc-brown
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0

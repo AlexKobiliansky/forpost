@@ -27,6 +27,16 @@
 </head>
 
 <body>
+<!-- preloader start -->
+<div class="preloader">
+	<div class="sk-folding-cube">
+		<div class="sk-cube sk-cube-1"></div>
+		<div class="sk-cube sk-cube-2"></div>
+		<div class="sk-cube sk-cube-4"></div>
+		<div class="sk-cube sk-cube-3"></div>
+	</div>
+</div>
+<!-- preloader end -->
 <div id="page-container">
 	<!-- mobile mnu -->
 	<nav id="mobile-mnu" data-logo="img/logo.svg">
@@ -81,7 +91,7 @@
 			<div class="intro-content">
 				<h1>Любые виды оценки</h1>
 				<h2>Для юридических и физических лиц <span>в Санкт-Петербурге</span></h2>
-				<a href="#0" class="btn btn-brown">Отправить заявку</a>
+				<a href="#popup-form" class="btn btn-brown">Отправить заявку</a>
 			</div>
 		</div>
 	</section>
@@ -226,7 +236,7 @@
 								<img src="img/icons/how-icon-1.svg" alt="alt" class="svg">
 							</div>
 							<div class="adv-item-title">Заявка на оценку</div>
-							<div class="adv-item-desc">Вы звоните или оставляете заявку на сайте <a href="#0" class="btn btn-brown">Оставить заявку</a></div>
+							<div class="adv-item-desc">Вы звоните или оставляете заявку на сайте <a href="#popup-form" class="btn btn-brown">Оставить заявку</a></div>
 
 						</div>
 					</div>
@@ -323,7 +333,7 @@
 				<!-- /faq-item -->
 			</div>
 			<div class="btn-wrap">
-				<a href="#0" class="btn btn-dark">Остались вопросы? Задавайте!</a>
+				<a href="#faq-form" class="btn btn-dark">Остались вопросы? Задавайте!</a>
 			</div>
 		</div>
 	</section>
@@ -417,7 +427,7 @@
 					<div class="btn-wrap">
 						<button type="submit" class="btn btn-brown">Отправить заявку</button>
 						<label class="label-checkbox">
-							<input type="checkbox" required checked> Согласие на обработку персональных данных</span>
+							<input type="checkbox" required checked> <span>Согласие на обработку персональных данных</span>
 						</label>
 					</div>
 				</div>
@@ -548,6 +558,92 @@
 	</section>
 	<!-- ======= SECTION PARTNERS END ======= -->
 
+	<!-- ======= SECTION FOOTER START ======= -->
+	<footer class="main-foot">
+		<div class="container">
+			<div class="foot-line">
+				<a href="/" class="logo">
+					<img src="img/logo.svg" alt="alt" class="svg">
+				</a>
+				<a href="mailto:fgarant.spb@gmail.com" class="email">fgarant.spb@gmail.com</a>
+				<div class="phones">
+					<a href="tel:+78129949060">+7 (812) 994-90-60</a>
+					<a href="tel:+79311015029">+7 (931) 101-50-29</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- ======= SECTION FOOTER END ======= -->
+</div>
+
+<div class="hidden">
+	<form class="contact-form popup-form" id="popup-form">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Форпост Гарант">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта Форпост Гарант">
+		<!-- END Hidden Required Fields -->
+
+
+		<h3>Оставьте заявку, мы перезвоним в течение 3 минут и уточним</h3>
+
+		<div class="form-labels-wrap">
+			<label>
+				<select name="Нужно оценить" data-validation="required">
+					<option selected disabled="disabled" hidden value="не указан">Мне нужно оценить</option>
+					<option value="Оценка автомобилей и прочих транспортных средств" >Оценка автомобилей и прочих транспортных средств</option>
+					<option value="Оценка жилой недвижимости">Оценка жилой недвижимости</option>
+					<option value="Оценка коммерческой недвижимости">Оценка коммерческой недвижимости</option>
+					<option value="Оценка оборудования">Оценка оборудования</option>
+				</select>
+			</label>
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Мой телефон для связи"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+					   data-validation-error-msg="* Укажите ваш телефон">
+			</label>
+
+			<div class="btn-wrap">
+				<button type="submit" class="btn btn-brown">Отправить заявку</button>
+				<label class="label-checkbox">
+					<input type="checkbox" required checked> <span>Согласие на обработку персональных данных</span>
+				</label>
+			</div>
+		</div>
+	</form>
+
+	<form class="contact-form popup-form" id="faq-form">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Форпост Гарант">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта Форпост Гарант">
+		<!-- END Hidden Required Fields -->
+
+
+		<h3>Оставьте вопрос, мы свяжемся с Вами в ближайшее время</h3>
+
+		<div class="form-labels-wrap">
+			<label>
+				<textarea name="Вопрос" placeholder="Мой вопрос"></textarea>
+			</label>
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Мой телефон для связи"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+					   data-validation-error-msg="* Укажите ваш телефон">
+			</label>
+
+			<div class="btn-wrap">
+				<button type="submit" class="btn btn-brown">Задать вопрос</button>
+				<label class="label-checkbox">
+					<input type="checkbox" required checked> <span>Согласие на обработку персональных данных</span>
+				</label>
+			</div>
+		</div>
+	</form>
 </div>
 
 

@@ -129,6 +129,16 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .foot-line
+    flex-direction: column
+    .logo
+      margin-bottom: 15px
+      .svg
+        width: 220px
+  .email
+    margin-bottom: 15px
+    font-size: 16px
+
   .partners-slide
     display: flex
     align-items: center
@@ -196,6 +206,25 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .jq-selectbox__dropdown
+    width: 100% !important
+    li
+      overflow: hidden
+
+  .popup-form
+    padding: 25px
+
+  .partners-slider
+    padding-left: 45px
+    padding-right: 45px
+
+  .foot-line
+    .logo
+      width: 100%
+      text-align: center
+    .phones
+      margin-top: 0
+
   .contacts-block
     h3
       font-size: 24px
@@ -215,6 +244,9 @@
       font-size: 20px
     .jq-selectbox__select, input
       font-size: 16px
+    .label-checkbox
+      span
+        width: calc(100% - 39px)
 
   .s-about
     font-size: 16px
