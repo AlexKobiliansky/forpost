@@ -69,6 +69,17 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-contacts
+    padding: 40px 0 30px
+
+  .contacts-img
+    margin-top: 0
+    margin-bottom: 40px
+
+  .contacts-block
+    h3
+      text-align: center
+      padding-left: 0
 
   form
     .label-checkbox
@@ -176,6 +187,20 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .contacts-block
+    h3
+      font-size: 24px
+
+  .contact-item
+    &-img
+      width: 50px
+      text-align: left
+      .svg
+        width: 35px
+    &-desc
+      width: calc(100% - 50px)
+      font-size: 14px
 
   form, .body-form
     h3
