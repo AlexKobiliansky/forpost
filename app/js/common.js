@@ -81,6 +81,10 @@ $(document).ready(function(){
             $('.adv-item-desc').matchHeight({byRow: true});
             $('.services-controls a').matchHeight();
         }
+
+        if (($(window).width()>=480) && ($(window).width()<768))  {
+            $('.partners-slide').matchHeight();
+        }
     }
 
     $(window).resize(function() {
@@ -90,6 +94,29 @@ $(document).ready(function(){
     heightses();
 
     $('.services-wrap').tabs();
+
+    $('.partners-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        margin: 40,
+        dots: false,
+        navText: ["",""],
+        responsive: {
+            0: {
+                items: 1,
+                autoWidth: false,
+                autoHeight: true,
+            },
+            480: {
+                items: 2,
+                autoHeight: false
+            },
+            768: {
+                items: 5,
+                autoWidth: true
+            }
+        }
+    });
 
     /** FAQ custom */
     $('.faq-item-quest').on("click", function(){

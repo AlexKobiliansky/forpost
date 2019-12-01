@@ -1,0 +1,31 @@
+.s-partners
+  background-color: #ebeef8
+  padding: 50px 0
+
+.partners-slider
+  margin-top: 45px
+  padding-left: 70px
+  padding-right: 70px
+  position: relative
+  .owl-nav
+    position: absolute
+    width: 100%
+    left: 0
+    top: calc(50% - 15px)
+    button.owl-prev, button.owl-next
+      position: absolute
+      width: 30px
+      height: 30px
+      cursor: pointer
+      +bg-cover
+      background-image: url('../img/icons/arrow.svg')
+    button.owl-prev
+      transform: rotate(180deg)
+      left: 0
+    button.owl-next
+      right: 0
+
+.partners-slide
+  img
+    height: 50px
+    width: auto!important
