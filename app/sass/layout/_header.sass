@@ -27,6 +27,11 @@
       margin-left: 0
     &:last-child
       margin-right: 0
+    &.active
+      a
+        color: $acc-brown
+        &:after
+          opacity: 1
   ul
     display: flex
     justify-content: space-between
@@ -48,6 +53,7 @@
       color: $acc-brown
       &:after
         opacity: 1
+
 
 .phones
   text-align: right

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    new WOW().init();
+
     /** mobile-mnu customization */
     var mmenu = $('#mobile-mnu');
     var menuLogo = mmenu.data("logo");
@@ -40,6 +42,24 @@ $(document).ready(function(){
         }, 300);
     });
     /** end mobile-mnu customization */
+
+    /** animations start */
+    function animateTypicItems($item, $firstDelay, $timeoutDelay){
+        $item.each(function(){
+            $(this).attr("data-wow-delay", $firstDelay + "s");
+            if ($(window).width()>=991) {
+                $firstDelay += $timeoutDelay;
+            }
+        });
+    }
+
+    animateTypicItems($('.s-advantages .adv-item'), 1, 0.1);
+    animateTypicItems($('.how-item'), 1, 0.1);
+    // animateTypicItems($('.how-item::before'), 2, 0.1);
+    animateTypicItems($('.services-controls li'), 0.5, 0.1);
+    animateTypicItems($('.faq-item'), 1, 0.1);
+    animateTypicItems($('.about-content li'), 1, 0.15);
+    /** animations end */
 
     $('img.svg').each(function(){
         var $img = jQuery(this);
@@ -108,8 +128,8 @@ $(document).ready(function(){
                 autoHeight: true,
             },
             480: {
-                items: 2,
-                autoHeight: false
+                items: 1,
+                autoHeight: true
             },
             768: {
                 items: 5,
@@ -119,6 +139,27 @@ $(document).ready(function(){
     });
 
     $('.preloader').fadeOut();
+
+    $(".main-mnu a").mPageScroll2id();
+
+    $(document).on('scroll', function() {
+        var posDoc = $(this).scrollTop();
+
+        $('section').each(function(){
+            var id = $(this).attr("id");
+            var topHeader = $(this).offset().top - 200;
+            var botHeader = topHeader + $(this).height() - 100;
+
+            if (
+                posDoc > topHeader &&
+                posDoc < botHeader &&
+                id
+            ) {
+                $('.main-mnu li').removeClass("active");
+                $( '.main-mnu li a[href="#' + id + '"]' ).parents("li").addClass("active");
+            }
+        });
+    });
 
     /** FAQ custom */
     $('.faq-item-quest').on("click", function(){
@@ -174,7 +215,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {
